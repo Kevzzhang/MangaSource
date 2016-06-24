@@ -1,0 +1,65 @@
+{% extends "baseAdmin.html" %}
+
+
+{% block title %}Admin{% endblock %}
+
+{% block navbar %}
+    {% include "navbarAdminLogged.html" %}
+{% endblock %}
+
+{%block content%}
+		<div class="container">
+		    <div class="row col-sm-12">
+		        <div class="input-group col-sm-7 col-sm-offset-2">
+		           	 <div class="form-top">
+                        <div class="form-top-left">
+                            <h3>Admin Panel</h3>
+                            
+                        </div>
+                        <div class="form-top-right">
+                            <i class="fa fa-user-secret"></i>	
+                        </div>
+                    </div>
+                    <div class="form-bottom col-sm-12">
+                    	<table class="table">
+						    <thead>
+						      <tr>
+						        <th>Book</th>
+						        <th>Status</th>
+						        <th>Date Modified</th>
+						        <th>Delete</th>
+						      </tr>
+						    </thead>
+						    <tbody>
+						      <tr class="success">
+						        <td>Naruto</td>
+						        <td>Finished</td>
+						        <td>2 jan 2016</td>
+						        <td><span class="glyphicon glyphicon-remove"></span></td>
+						      </tr>
+						      <tr class>
+						        <td>Mary</td>
+						        <td>Moe</td>
+						        <td>mary@example.com</td>
+						      </tr>
+						      <tr class="info">
+						        <td>July</td>
+						        <td>Dooley</td>
+						        <td>july@example.com</td>
+						      </tr>
+						    </tbody>
+						 </table>
+					</div>
+                </div>
+            </div>
+        </div>
+
+{% endblock %}
+
+
+{% block Scripts %}
+    <!--  Scripts-->
+      
+    <script src="/JS/jquery.min.js"></script>
+    <script src="/JS/bootstrap.min.js"></script>
+{% endblock %}

@@ -1,0 +1,333 @@
+body{
+     font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    font-weight: 300;
+}
+.container-fluid{
+    padding: 0px;
+}
+#bgHeader{
+    background-image: url(../Image/header.jpg)
+}
+#container-header{
+    background-color: darkturquoise;
+    height: 400px;
+    color:white;
+    padding-top: 50px;
+    text-align: center;
+}
+#container-header h1{
+    font-size: 50px;
+}
+/*navbar*/
+#navBar { 
+    position: relative;
+    z-index: 2; 
+}
+#navBar.affix {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 2;
+}
+.navbar{
+    margin-bottom: 0px;
+}
+.navbar-form{
+    margin:0px;
+}
+.navbar-brand{
+    padding-left:50px;
+    width:230px;
+}
+.cool-link::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: darkcyan;
+    transition: width .3s;
+}
+
+.cool-link:hover::after {
+    width: 100%;
+    transition: width .3s;
+}
+
+/*slider width*/
+.carousel-inner > .item > img,
+.carousel-inner > .item > a > img {
+    width: 50%;
+    margin: auto;
+}
+
+/*isi utama*/
+#main-container{
+    width: 100%;
+    height: 500px;
+    margin-top:0px;
+    background-color: beige;
+}
+
+.menu-box{
+    /*margin:20px;*/
+    width: 250px;
+    height: 250px;
+    border: solid darkgrey 1px;
+}
+.cover-info{
+    position: absolute;
+    margin: 15px;
+    width: 110px;
+    
+}
+div.scroll {
+    height: 618px;
+    overflow: scroll;
+}
+.container .menu-box{
+    list-style-type: none;
+}
+
+.container .row{
+    margin-top:20px;
+}
+#popular .row .row .thumbnail{
+    margin-right: 20px;
+}
+
+#Latest{
+    margin:0px;
+    background-color: darkorange;
+}
+body{
+    position: relative;
+}
+
+#mangaList .jumbotron{
+    background-image:url(../Image/body-bg-bottom.png);
+}
+#mangaList blockquote{
+    border-left:2px solid lawngreen;
+}
+#mangaList button{
+    border: 0;
+  background: lawngreen;
+  border-radius: 4px;
+  box-shadow: 0 5px 0 green;
+  color: #fff;
+  cursor: pointer;
+  font: inherit;
+  margin: 0;
+  outline: 0;
+  padding: 12px 20px;
+  transition: all .1s linear;
+}
+#mangaList button:active{
+    box-shadow: 0 2px 0 green;
+  transform: translateY(3px);
+}
+.modal-backdrop {
+  z-index: -1;
+}
+modal-body .form-group{
+    margin:25px;
+}
+.navbar-form .form-group { 
+   margin:10px;
+ 
+}
+#loginModal .modal-body{
+    height: 215px;
+}
+.form-group{
+    margin:20px;
+}
+#signUpModal .modal-body{
+    height: 300px;
+    text-align: left;
+}
+
+.aboutUs-title{
+    border-color: green;
+}
+.aboutUs-name{
+    text-align: center;
+    width: inherit;
+}
+
+
+figure { 
+  display: block; 
+  position: relative; 
+  float: left; 
+  overflow: hidden; 
+}
+figcaption { 
+  position: absolute; 
+  background: rgba(0,0,0,0.75); 
+  color: white; 
+  padding: 10px 20px; 
+  opacity: 0;
+  -webkit-transition: all 0.6s ease;
+  -moz-transition:    all 0.6s ease;
+  -o-transition:      all 0.6s ease;
+  width: 400px;
+  height: 200px;
+}
+figure:hover figcaption {
+  opacity: 1;
+}
+figure:before { 
+  content: "?"; 
+  position: absolute; 
+  font-weight: 800; 
+  background: rgba(255,255,255,0.75); 
+  text-shadow: 0 0 5px white;
+  color: black;
+  width: 24px;
+  height: 24px;
+  -webkit-border-radius: 12px;
+  -moz-border-radius:    12px;
+  border-radius:         12px;
+  text-align: center;
+  font-size: 14px;
+  line-height: 24px;
+  -moz-transition: all 0.6s ease;
+  opacity: 0.75;	
+}
+figure:hover:before {
+  opacity: 0;
+}
+.cap-bot:before { bottom: 10px; left: 10px; }
+.cap-bot figcaption { left: 0; bottom: -30%;}
+.cap-bot:hover figcaption { bottom: 0; }
+
+#contactUs{
+    list-style: none;
+}
+#contactUs blockquote{
+    border-color:red;
+}
+
+
+
+/*=========================
+  Icons
+ ================= */
+
+/* footer social icons */
+ul.social-network {
+	list-style: none;
+	display: inline;
+	margin-left:0 !important;
+	padding: 0;
+}
+ul.social-network li {
+	display: inline;
+	margin: 0 5px;
+}
+
+
+
+/*=========================
+  Icons
+ ================= */
+
+/* footer social icons */
+ul.social-network {
+	list-style: none;
+	display: inline;
+	margin-left:0 !important;
+	padding: 0;
+}
+ul.social-network li {
+	display: inline;
+	margin: 0 5px;
+}
+
+
+/* footer social icons */
+.icoFacebook{
+    background-image: url(../Image/fblogo.png);
+    background-repeat: none;
+    background-size: 100%;
+}
+.icoTwitter{
+    background-image: url(../Image/twitlogo.png);
+    background-repeat: none;
+    background-size: 100%;
+}
+.icoGoogle{
+    background-image: url(../Image/g+logo.png);
+    background-repeat: none;
+    background-size: 100%;
+}
+.social-network a.icoFacebook:hover {
+	background-color:#3B5998;
+}
+.social-network a.icoTwitter:hover {
+	background-color:#33ccff;
+}
+.social-network a.icoGoogle:hover {
+	background-color:#BD3518;
+}
+.social-network a.icoVimeo:hover {
+	background-color:#0590B8;
+}
+
+.social-network a.icoRss:hover i, .social-network a.icoFacebook:hover i, .social-network a.icoTwitter:hover i,
+.social-network a.icoGoogle:hover i, .social-network a.icoVimeo:hover i, .social-network a.icoLinkedin:hover i {
+	color:#fff;
+}
+a.socialIcon:hover, .socialHoverClass {
+	color:#44BCDD;
+}
+
+.social-circle li a {
+	display:inline-block;
+	position:relative;
+	margin:0 auto 0 auto;
+	-moz-border-radius:50%;
+	-webkit-border-radius:50%;
+	border-radius:50%;
+	text-align:center;
+	width: 50px;
+	height: 50px;
+	font-size:20px;
+}
+.social-circle li i {
+	margin:0;
+	line-height:50px;
+	text-align: center;
+}
+
+.social-circle li a:hover{
+	-moz-transform: rotate(360deg);
+	-webkit-transform: rotate(360deg);
+	-ms--transform: rotate(360deg);
+	transform: rotate(360deg);
+	-webkit-transition: all 0.2s;
+	-moz-transition: all 0.2s;
+	-o-transition: all 0.2s;
+	-ms-transition: all 0.2s;
+	transition: all 0.2s;
+}
+.social-circle a {
+	color: #fff;
+	-webkit-transition: all 0.8s;
+	-moz-transition: all 0.8s;
+	-o-transition: all 0.8s;
+	-ms-transition: all 0.8s;
+	transition: all 0.8s;
+}
+
+
+#footerWrapper{
+    background-image: url(../Image/footer.png);
+    background-size:50%;
+    
+}
+#footerRights .row{
+    color:white;
+}

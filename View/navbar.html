@@ -1,0 +1,162 @@
+<nav class="navbar navbar-inverse" id="navBar" data-spy="affix" data-offset-top="200" >
+    <div class="container-fluid">
+        <div class="navbar-header col-sm-2">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>                        
+            </button>
+            <a class="navbar-brand" href="#">Manga Source</a>
+        </div>
+        <div class="collapse navbar-collapse" id="myNavbar">
+            <ul class="nav navbar-nav col-sm-5">
+                <li class="active cool-link"><a href="#Popular">Popular</a></li>
+                <li class="cool-link"><a href="#Latest">Latest Update</a></li>
+                <li class="cool-link"><a href="#mangaList">Manga List</a></li> 
+                <li class="cool-link"><a href="#aboutUs">About Us</a></li> 
+            </ul>
+            <form class="navbar-form col-sm-10" role="search">
+               <div class="form-group">
+                    <div class="input-group">
+                            <input type="text" class="form-control" placeholder="Search for...">
+                        <span class="input-group-btn">
+                            <button class="btn btn-success" type="button">Go!</button>
+                        </span>
+                    </div> 
+               </div>
+               <button type="button" class="btn btn-info" data-toggle="modal" data-target="#loginModal">Login</button>
+                <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#signUpModal">Sign Up</button>
+            </form>
+           <!--  Trigger the modal with a button --> 
+            
+                <!-- <!-- Modal -->
+            <div class="modal fade" id="loginModal" role="dialog">
+                <div class="modal-dialog modal-lg">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                <h4 class="modal-title">Login</h4>
+                        </div>
+                        <div class="modal-body">
+                            <form method="POST" action="login"  class="form-horizontal" role="form">
+                              
+                              <div class="form-group">
+                                <label class="control-label col-sm-2" for="email">Username:</label>
+                                <div class="col-sm-10">
+                                    <input name="username" type="text" class="form-control" id="username" placeholder="Enter username">
+                                </div>
+                              </div>
+                              
+                              <div class="form-group">
+                                    <label class="control-label col-sm-2" for="pwd">Password:</label>
+                                    <div class="col-sm-10"> 
+                                      <input name="password" type="password" class="form-control" id="pwd" placeholder="Enter password">
+                                    </div>
+                              </div>
+                              <div class="form-group"> 
+                                <div class="col-sm-offset-2 col-sm-10">
+                                  <button type="submit" class="btn btn-default">Submit</button>
+                                </div>
+                              </div>
+                            </form>
+
+                            <!-- 
+                                <form method="POST" action="login">
+                                        <input name="username" type="text"  id="username" placeholder="Enter username">
+                                 
+                                        <input name="password" type="password" id="pwd" placeholder="Enter password">
+                                
+                                        <input type="submit">
+                              </form> -->     
+                        </div>
+                         <div class="modal-footer">
+                                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal fade" id="signUpModal" role="dialog">
+                <div class="modal-dialog modal-lg">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                <h4 class="modal-title">Register your Account</h4>
+                        </div>
+                        <div class="modal-body">
+                            <form class="form-horizontal" method="Post" action="/Signup">
+                                <div class="row">
+                                     <div class="form-inline col-sm-12">
+                                            <div class="form-group">
+                                                    <label for="inputFname" class="col-sm-3 control-label">Firstname</label>
+                                                    <div class="col-sm-3">
+                                                            <input name="fname" type="text" class="form-control" id="inputFname" placeholder="Firstname" required>
+                                                    </div>
+                                                    <label for="inputLname" class="col-sm-3 control-label">Lastname</label>
+                                                    <div class="col-sm-3">
+                                                            <input name="lname" type="text" class="form-control" id="inputLname" placeholder="Lastname" required>
+                                                    </div>
+                                            </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                     <div class="form-inline col-sm-12">
+                                            <div class="form-group">
+                                                    <label for="inputUsername" class="col-sm-6 control-label">Username</label>
+                                                    <div class="col-sm-6">
+                                                            <input name="username" type="text" class="form-control" id="inputUsername" placeholder="Firstname" required>
+                                                    </div>
+                                            </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                     <div class="form-inline col-sm-12">
+                                            <div class="form-group">
+                                                <label for="inputPass1" class="col-sm-3 control-label">Password</label>
+                                                <div class="col-sm-3">
+                                                        <input name="password1" type="password" class="form-control" id="inputPass1" placeholder="Password" required>
+                                                </div>
+                                                <label for="inputPass2" class="col-sm-3 control-label">Re-Password</label>
+                                                <div class="col-sm-3">
+                                                        <input name="password2" type="password" class="form-control" id="inputPass2" placeholder="Re-type Password" required>
+                                                </div>
+                                            </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                     <div class="form-inline col-sm-12">
+                                            <div class="form-group">
+                                                <label for="inputUsername" class="col-sm-3 control-label">Email</label>
+                                                <div class="col-sm-3">
+                                                        <input name="email" type="email" class="form-control" id="inputEmail" placeholder="Email" required>
+                                                </div>
+                                                <label for="Sex" class="col-sm-4 control-label">Jenis Kelamin</label>
+                                                <div class="col-sm-2">
+                                                        <select  class="form-control" id="Sex">
+                                                            <option value="L">Laki-Laki</option>
+                                                            <option value="P">Perempuan</option>
+                                                        </select>
+                                                </div>
+                                            </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="form-group col-sm-12">
+                                            <div class="col-sm-offset-2 col-sm-2">
+                                                    <button type="submit" class="btn btn-success">Submit</button>
+                                            </div>
+                                            <div class="col-sm-offset-2">
+                                                    <button type="submit" class="btn btn-warning">Cancel</button>
+                                            </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="modal-footer">
+                                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+       </div>         
+    </div>
+</nav>

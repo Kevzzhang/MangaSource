@@ -1,0 +1,60 @@
+{% extends "baseAdmin.html" %}
+
+
+{% block title %}Admin{% endblock %}
+
+{% block navbar %}
+    {% include "navbarAdminLogged.html" %}
+{% endblock %}
+
+{%block content%}
+			<div class="container">
+			    <div class="row col-sm-12">
+			        <div class="input-group col-sm-7 col-sm-offset-2">
+			           	 <div class="form-top">
+                            <div class="form-top-left">
+                                <h3>Admin Panel</h3>
+                                
+                            </div>
+                            <div class="form-top-right">
+                                <i class="fa fa-user-secret"></i>	
+                            </div>
+                        </div>
+                        <div class="form-bottom col-sm-12">
+                        	<div class="input-group" >
+								 <span class=" input-group-addon glyphicon glyphicon-book" id="basic-addon1"> Id </span>
+								 <input type="text" class="form-control" placeholder="Input ID">
+							</div>
+                        	<div class="input-group" >
+								 <span class=" input-group-addon glyphicon glyphicon-book" id="basic-addon1"> Comic </span>
+								 <input type="text" class="form-control" placeholder="Input comic title">
+							</div>
+							<div class="input-group" >
+								 <span class=" input-group-addon glyphicon glyphicon-user" id="basic-addon1"> Author </span>
+								 <input type="text" class="form-control" placeholder="Input comic author">
+								 <span class=" input-group-addon glyphicon glyphicon-star" id="basic-addon1"> Rating </span>
+								 <input type="text" class="form-control" placeholder="Input comic Rating">
+							</div>
+							<div class="form-group">
+						      <label for="comment">Story:</label>
+						      <textarea class="form-control" rows="5" id="comment"></textarea>
+						    </div>
+						    <div class="input-group">
+
+						    	<button type="button" class="btn btn-success">Submit</button>
+						    	<button type="button" class="btn btn-warning">Cancel</button>
+						    </div>
+						</div>
+                    </div>
+                </div>
+            </div>
+
+{% endblock %}
+
+
+{% block Scripts %}
+    <!--  Scripts-->
+      
+    <script src="/JS/jquery.min.js"></script>
+    <script src="/JS/bootstrap.min.js"></script>
+{% endblock %}
