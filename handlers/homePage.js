@@ -53,7 +53,7 @@ register = function(req,res,next){
     }
     // Insert the New User to database
     USER.saveUSER(User).then(function(){
-    res.json('User' + User.username +' berhasil didaftar');
+    res.json('User ' + User.username +' berhasil didaftar');
      
        // USER.findUSER(User.username).then(function(row){
            // // Create First Collection Data

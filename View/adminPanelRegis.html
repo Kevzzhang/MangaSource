@@ -20,31 +20,33 @@
                                 <i class="fa fa-user-secret"></i>	
                             </div>
                         </div>
-                        <div class="form-bottom col-sm-12">
-                        	<div class="input-group" >
-								 <span class=" input-group-addon glyphicon glyphicon-book" id="basic-addon1"> Id </span>
-								 <input type="text" class="form-control" placeholder="Input ID">
-							</div>
+                        <form method="POST" class="form-bottom col-sm-12">
+                        	<div class="input-group">
+						      <input name="cover" type="text" class="form-control" placeholder="Cover">
+						      <span class="input-group-btn">
+						        <button class="btn btn-info" type="button"> Browse <span class="glyphicon glyphicon-search"></button>
+						      </span>
+						    </div>
                         	<div class="input-group" >
 								 <span class=" input-group-addon glyphicon glyphicon-book" id="basic-addon1"> Comic </span>
-								 <input type="text" class="form-control" placeholder="Input comic title">
+								 <input name="title" type="text" class="form-control" placeholder="Input comic title">
 							</div>
 							<div class="input-group" >
 								 <span class=" input-group-addon glyphicon glyphicon-user" id="basic-addon1"> Author </span>
-								 <input type="text" class="form-control" placeholder="Input comic author">
+								 <input name="author" type="text" class="form-control" placeholder="Input comic author">
 								 <span class=" input-group-addon glyphicon glyphicon-star" id="basic-addon1"> Rating </span>
-								 <input type="text" class="form-control" placeholder="Input comic Rating">
+								 <input name="rating" type="text" class="form-control" placeholder="Input comic Rating">
 							</div>
 							<div class="form-group">
 						      <label for="comment">Story:</label>
-						      <textarea class="form-control" rows="5" id="comment"></textarea>
+						      <textarea name="about" class="form-control" rows="5" id="comment"></textarea>
 						    </div>
 						    <div class="input-group">
 
-						    	<button type="button" class="btn btn-success">Submit</button>
+						    	<button type="submit" class="btn btn-success">Submit</button>
 						    	<button type="button" class="btn btn-warning">Cancel</button>
 						    </div>
-						</div>
+						</form>
                     </div>
                 </div>
             </div>
