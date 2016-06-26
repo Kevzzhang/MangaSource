@@ -1,0 +1,115 @@
+{% extends "base.html" %}
+
+{% block navbar %}
+    {% include "navbar.html" %}
+{% endblock %}
+
+{% block content %}
+
+
+<style type="text/css">
+    .cover{float: right;width: 270px;height: 410px;}
+    .desc{margin: 10px;}
+
+</style>
+
+<div class="container-fluid">
+
+    <div class="container-fluid">
+
+
+
+        <div class="row jumbotron"  id="Latest">
+        <!--   <h2>Boku No Hero Academia</h2>
+          <p>Author : Horikoshi Kouhei</p>
+          <p>Artist : Horikoshi Kouhei</p>
+          <p>Status : Ongoing</p> -->
+
+          <div class="thumbnail">
+            <div class="desc">
+                                    <img class="cover" src="/Image/boku no hero cover.jpg">
+                                    <!-- <div class="caption"> -->
+                                    <h2>Boku No Hero Academia</h2>
+                                        <p>Author : Horikoshi Kouhei</p>
+                                        <p>Artist : Horikoshi Kouhei</p>
+                                        <p>Status : Ongoing</p>
+                                        <p>Type : Manga(Japanese)</p>
+                                        <p>Description : </p> 
+                                        <p>Izuku "Deku" Midoriya was just a regular middle school student in a world where people with superpowers known as "Quirks" are the norm. However, he dreams of one day becoming a Hero, despite being bullied by his classmates for not having a Quirk. The story follows Izuku's entrance into Yūei High School, where the next generation of Heroes are cultivated.</p>
+            </div>
+                                    <!-- </div> -->
+        </div>
+          <div class="col-md-12 ">
+              <div class="row panel list-group scroll col-md-12">
+                                    
+                                    <div class="container theme-showcase" role="main">
+
+                                        <div class="page-header">
+                                            
+                                        </div>
+
+                                        <div class="row">
+
+                                            <div class="col-md-6">
+
+                                                <table class="table table-striped">
+
+                                                    <thead>
+
+                                                        <tr>
+
+                                                            <th>#</th>
+                                                            <th>Chapter</th>
+                                                            <th></th>
+                                                            
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+
+                                                        <tr>
+
+                                                            <td>1</td>
+                                                            <td>Boku No Hero Academia CH1</a></td>
+                                                            <td><a href="/readbokunohero">Read</a></td>
+                                                          
+                                                        </tr>
+
+                                                        <tr>
+
+                                                            <td>2</td>
+                                                            <td>Boku No Hero Academia CH2</a></td>
+                                                            <td><a href="">Read</a></td>
+                
+                                                        </tr>
+
+                                                        <tr>
+
+                                                            <td>3</td>
+                                                            <td>Boku No Hero Academia CH3</a></td>
+                                                            <td><a href="">Read</a></td>
+                                                              
+                                                        </tr>
+
+                                                    </tbody>
+
+                                                </table>
+
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+                                    
+              </div>
+          </div>
+                        
+        </div>
+    </div>
+
+</div>
+{% endblock %}
+{% block footer %}
+    {% include "footer.html" %}
+{% endblock %}
+{% block Scripts %}
+{% endblock %}

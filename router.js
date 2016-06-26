@@ -3,6 +3,11 @@ var express = require('express'),
 	// user handler
 	homePage = require("./handlers/homePage"),
 	homeLoggedPage = require("./handlers/homeLoggedPage"),
+	lstmanga = require("./handlers/mangaList"),
+	bokunohero = require("./handlers/bokunoheroprofil"),
+	readbokunohero = require("./handlers/readbnha"),
+	
+
 	Auth = require("./auth");
 
 	// admin handler
@@ -10,6 +15,7 @@ var express = require('express'),
 	adminLogged = require("./handlers/AdminLogged"),
 	adminRegis = require("./handlers/AdminRegis"),
 	adminUpdate = require("./handlers/AdminUpdate"),
+	
 	AuthAdmin = require("./authAdmin");// Authadmin
 
 	
@@ -21,7 +27,10 @@ var admin = express.Router(),
 userrouter = function(app){
 	// GET
     user.get('/',homePage.page);
-	user.get('/Logged/:username',Auth.validate,homeLoggedPage.page)
+	user.get('/Logged/:username',Auth.validate,homeLoggedPage.page);
+	user.get('/mangalist',lstmanga.page);
+	user.get('/BokuNoHero',bokunohero.page);
+	user.get('/ReadBokuNoHero',readbokunohero.page);
 	user.get('/logout',Auth.validate,function(req,res){
 		res.clearCookie('auth');
 		res.redirect('/');
