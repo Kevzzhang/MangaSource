@@ -55,6 +55,7 @@ adminrouter = function(app){
 	
 	//POST
 	admin.post('/login',adminPage.login);
+	admin.post('/adminpanel/:usrname/adminRegis',AuthAdmin.validate,adminRegis.registerBook);
     app.use('/admin',admin);///admin = action /harus local host 3000 /admin , semua url/admin memakian object admin
 }
 

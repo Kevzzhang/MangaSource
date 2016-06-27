@@ -20,27 +20,17 @@ registerBook = function(req, res){
 		rating : req.body.rating,
 		about : req.body.about
 	}
-	ADMIN.createBook(Book).then(function(){
-		ADMIN.findBOOK(Book.title).then(function(row){
-			// Create First Collection Data
-            // var Collection ={
-            //     photos : JSON.stringify([]),
-            //     path : path.join(__dirname, '..','public/Image/Manga',(row[0].id_buku).toString()),
-            //     id_buku : row[0].id_buku
-            // }
-            // // Insert the New Collection to database
-            // COLLECTION.saveCOLLECTION(Collection).then(function(){
-            //     var dir = Collection.path;
-            //     // Create User folder named 'username' into public/images/username
-            //     if (!fs.existsSync(dir)){
-            //          fs.mkdirSync(dir);
-            //     }
-            //     res.render('terdaftar'); 
-                 fs.mkdirSync(path.join(__dirname, '..','public/Image/Manga',(row[0].id_buku).toString()));
-                
-                res.render('terdaftar'); 
-           
-		})
+
+	ADMIN.findBOOK(Book.title).then(function(row){
+        if(row){
+            res.JSON("buku ada judul yang sama");
+        }
+        else{
+            ADMIN.createBook(Book).then(function(){        
+                fs.mkdirSync(path.join(__dirname, '..','public/Image/Manga',(Book.title).toString()));
+                res.JSON('terdaftar');     
+    	    })
+        }
     });
 }
 adminPanel = {
