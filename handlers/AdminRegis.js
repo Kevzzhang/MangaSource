@@ -22,13 +22,13 @@ registerBook = function(req, res){
 	}
 
 	ADMIN.findBOOK(Book.title).then(function(row){
-        if(row){
-            res.JSON("buku ada judul yang sama");
+        if(row.length > 0){
+            res.json('buku ada judul yang sama');
         }
         else{
             ADMIN.createBook(Book).then(function(){        
                 fs.mkdirSync(path.join(__dirname, '..','public/Image/Manga',(Book.title).toString()));
-                res.JSON('terdaftar');     
+                res.json('terdaftar');     
     	    })
         }
     });
