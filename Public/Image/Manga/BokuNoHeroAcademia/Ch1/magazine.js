@@ -162,25 +162,6 @@ function processRegion(region, regionType) {
 
 }
 
-// Load large page
-
-function loadLargePage(page, pageElement) {
-	
-	var img = $('<img />');
-
-	img.load(function() {
-
-		var prevImg = pageElement.find('img');
-		$(this).css({width: '100%', height: '100%'});
-		$(this).appendTo(pageElement);
-		prevImg.remove();
-		
-	});
-
-	// Loadnew page
-	
-	img.attr('src', 'pages/' +  page + '-large.jpg');
-}
 
 // Load small page
 
