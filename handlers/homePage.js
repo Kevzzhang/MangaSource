@@ -1,7 +1,10 @@
 var frontPage,
     page,
     login,
+    register,
+    search,
     USER = require("../utils/USER"),
+    BOOK = require("../utils/BOOK"),
     Auth = require("../auth");
     
 page = function(req,res){
@@ -75,12 +78,28 @@ register = function(req,res,next){
         // })
         
     });
+}
+
+search = function(req,res){
+    var query = req.body.query;
+    console.log(query);
+    BOOK.searchTitle(query).then(function(SearchResult){
+        console.log(SearchResult);
+        if (SearchResult.length > 0){
+            res.json(SearchResult);
+        }
+        else{
+            res.json("empty");
+        }
+    });
     
 }
+
 frontPage = {
     page : page,
     login : login,
-    register : register
+    register : register,
+    search : search
 }
 
 module.exports = frontPage;
