@@ -15,18 +15,24 @@
                 <li class="cool-link"><a href="#mangaList">Manga List</a></li> 
                 <li class="cool-link"><a href="#aboutUs">About Us</a></li> 
             </ul>
-            <form class="navbar-form col-sm-10" role="search">
+            <form class="navbar-form col-sm-10" role="search" method="POST" action ="search">
                <div class="form-group">
                     <div class="input-group">
-                            <input type="text" class="form-control" placeholder="Search for...">
+                            <input name="query" type="text" class="form-control" placeholder="Search for...">
                         <span class="input-group-btn">
-                            <button class="btn btn-success" type="button">Go!</button>
+                            <button class="btn btn-success" type="submit">Go!</button>
                         </span>
                     </div> 
                </div>
-               <button type="button" class="btn btn-info" data-toggle="modal" data-target="#loginModal">Login</button>
-                <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#signUpModal">Sign Up</button>
             </form>
+            <div class="navbar-form col-sm-10" role="search">
+               <div class="form-group">
+                    <div class="input-group">
+                        <button type="button" class="btn btn-info" data-toggle="modal" data-target="#loginModal">Login</button>  
+                        <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#signUpModal">Sign Up</button>
+                    </div> 
+               </div>
+            </div>
            <!--  Trigger the modal with a button --> 
             
                 <!-- <!-- Modal -->

@@ -39,6 +39,7 @@ userrouter = function(app){
 	//POST
 	user.post('/login',homePage.login);
 	user.post('/Signup',homePage.register);
+	user.post('/search',homePage.search);
     app.use(user);
 }
 
@@ -56,6 +57,7 @@ adminrouter = function(app){
 	//POST
 	admin.post('/login',adminPage.login);
 	admin.post('/adminpanel/:username/adminRegis',AuthAdmin.validate,adminRegis.registerBook);
+	admin.post('/adminpanel/:username/adminUpdate',AuthAdmin.validate,adminUpdate.addChapter);
     app.use('/admin',admin);///admin = action /harus local host 3000 /admin , semua url/admin memakian object admin
 }
 

@@ -5,6 +5,7 @@ var table = function(table){
 	table.string('deskripsi',500);
 	table.string('status',10).notNullable();
 	table.string('rating',10).notNullable();
+	table.datetime('waktu').notNullable();
 };
 
 

@@ -2,6 +2,7 @@ var table = function(table){
 	table.increments('id_chapter').primary();
 	table.string('namaChapter',50).notNullable();
 	table.datetime('waktu').notNullable();
+	table.integer('id_buku').notNullable();
 };
 
 

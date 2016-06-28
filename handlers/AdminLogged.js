@@ -1,11 +1,13 @@
 var adminPanel,
     page,
-    login;
+    login,
+    Book = require("../utils/BOOK");
     
 page = function(req,res){
     var username = req.params.username;
-    res.render('adminPanelComicList.html',{username : username});
- 
+    Book.fetchAllBook().then(function(Books){
+        res.render('adminPanelComicList.html',{username : username, Books : Books});
+    });
 }
 
 adminPanel = {

@@ -25,10 +25,9 @@
 								 <span class=" input-group-addon glyphicon glyphicon-book" id="basic-addon1"> Comic </span>
 								 <select class=" form-control" id="sel1">
 								 	<option>Select the comic title</option>
-							        <option>Naruto</option>
-							        <option>Bleach</option>
-							        <option>Boku no Hero</option>
-							        <option>Shokugeki no souma</option>
+									 {% for book in Books %}
+									 	<option>{{book.judul}}</option>
+									 {% endfor %}
 							      </select>
 							</div>
 							<div class="input-group">
