@@ -39,6 +39,7 @@ userrouter = function(app){
 	//POST
 	user.post('/login',homePage.login);
 	user.post('/Signup',homePage.register);
+	user.post('/search',homePage.search);
     app.use(user);
 }
 
