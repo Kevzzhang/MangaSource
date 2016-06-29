@@ -191,6 +191,19 @@ img { max-width: 100%; }
 .form-control{
 	margin:1px;
 }
+#navBar { 
+    position: relative;
+    z-index: 2; 
+}
+#navBar.affix {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 2;
+}
+.navbar{
+    margin-bottom: 0px;
+}
 .nav .btn .btn-danger{
 	margin-top: 6px;
 }
