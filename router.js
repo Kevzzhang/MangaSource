@@ -29,8 +29,8 @@ userrouter = function(app){
     user.get('/',homePage.page);
 	user.get('/Logged/:username',Auth.validate,homeLoggedPage.page);
 	user.get('/mangalist',lstmanga.page);
-	user.get('/BokuNoHero',bokunohero.page);
-	user.get('/ReadBokuNoHero',readbokunohero.page);
+	user.get('/mangalist/BokuNoHero',bokunohero.page);
+	user.get('/mangalist/BokuNoHero/ReadBokuNoHeroCh1',readbokunohero.page);
 	user.get('/logout',Auth.validate,function(req,res){
 		res.clearCookie('auth');
 		res.redirect('/');

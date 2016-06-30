@@ -48,7 +48,7 @@ function loadPage(page, pageElement) {
 
 	// Load the page
 
-	img.attr('src', 'Image/Manga/BokuNoHeroAcademia/Ch1/' +  page + '.jpg');
+	img.attr('src', '/Image/Manga/BokuNoHeroAcademia/Ch1/' +  page + '.jpg');
 
 	loadRegions(page, pageElement);
 
@@ -174,7 +174,7 @@ function loadSmallPage(page, pageElement) {
 	img.unbind('load');
 	// Loadnew page
 
-	img.attr('src', 'Image/Manga/BokuNoHeroAcademia/Ch1/' +  page + '.jpg');
+	img.attr('src', '/Image/Manga/BokuNoHeroAcademia/Ch1/' +  page + '.jpg');
 }
 
 // http://code.google.com/p/chromium/issues/detail?id=128488
