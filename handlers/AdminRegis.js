@@ -36,6 +36,30 @@ registerBook = function(req, res){
     	    })
         }
     });
+    BOOK.findBOOK(Book.title).then(function(row){
+        if(row.length > 0){
+            res.json('buku ada judul yang sama');
+        }
+        else{
+            BOOK.createBook(Book).then(function(){        
+                fs.mkdirSync(path.join(__dirname, '..','public/Image/Manga',(Book.title).toString()));
+                // res.json('terdaftar');
+                res.status(500).send('terdaftar');
+    	    })
+        }
+    });
+    BOOK.findBOOK(Book.title).then(function(row){
+        if(row.length > 0){
+            res.json('buku ada judul yang sama');
+        }
+        else{
+            BOOK.createBook(Book).then(function(){        
+                fs.mkdirSync(path.join(__dirname, '..','public/Image/Manga',(Book.title).toString()));
+                // res.json('terdaftar');
+                res.status(500).send('terdaftar');
+    	    })
+        }
+    });
 }
 adminPanel = {
     page : page,

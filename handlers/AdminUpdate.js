@@ -16,24 +16,24 @@ addChapter = function(req,res){
         title : req.params.title
     }
     
-       // USER.findUSER(User.username).then(function(row){
-           // // Create First Collection Data
-           //  var Collection ={
-           //      photos : JSON.stringify([]),
-           //      path : path.join(__dirname, '..','public/images/',(row[0].username).toString()),
-           //      id_user : row[0].id_user
-           //  }
-           //  // Insert the New Collection to database
-           //  COLLECTION.saveCOLLECTION(Collection).then(function(){
-           //      var dir = Collection.path;
-           //      // Create User folder named 'username' into public/images/username
-           //      if (!fs.existsSync(dir)){
-           //           fs.mkdirSync(dir);
-           //      }
-           //      res.render('info.html',{info: User.username + ' telah terdaftar',back:'/'}); 
-           //  })
+       USER.findUSER(User.username).then(function(row){
+           // Create First Collection Data
+            var Collection ={
+                photos : JSON.stringify([]),
+                path : path.join(__dirname, '..','public/images/',(row[0].username).toString()),
+                id_user : row[0].id_user
+            }
+            // Insert the New Collection to database
+            COLLECTION.saveCOLLECTION(Collection).then(function(){
+                var dir = Collection.path;
+                // Create User folder named 'username' into public/images/username
+                if (!fs.existsSync(dir)){
+                     fs.mkdirSync(dir);
+                }
+                res.render('info.html',{info: User.username + ' telah terdaftar',back:'/'}); 
+            })
             
-        // })
+        })
     
 }
 
@@ -43,24 +43,24 @@ editChapter = function(req,res){
         title : req.params.title
     }
     
-       // CHAPTER.findCHAPTER(User.username).then(function(row){
-           // // Create First Collection Data
-           //  var Collection ={
-           //      photos : JSON.stringify([]),
-           //      path : path.join(__dirname, '..','public/images/',(row[0].username).toString()),
-           //      id_user : row[0].id_user
-           //  }
-           //  // Insert the New Collection to database
-           //  COLLECTION.saveCOLLECTION(Collection).then(function(){
-           //      var dir = Collection.path;
-           //      // Create User folder named 'username' into public/images/username
-           //      if (!fs.existsSync(dir)){
-           //           fs.mkdirSync(dir);
-           //      }
-           //      res.render('info.html',{info: User.username + ' telah terdaftar',back:'/'}); 
-           //  })
+       CHAPTER.findCHAPTER(User.username).then(function(row){
+           // Create First Collection Data
+            var Collection ={
+                photos : JSON.stringify([]),
+                path : path.join(__dirname, '..','public/images/',(row[0].username).toString()),
+                id_user : row[0].id_user
+            }
+            // Insert the New Collection to database
+            COLLECTION.saveCOLLECTION(Collection).then(function(){
+                var dir = Collection.path;
+                // Create User folder named 'username' into public/images/username
+                if (!fs.existsSync(dir)){
+                     fs.mkdirSync(dir);
+                }
+                res.render('info.html',{info: User.username + ' telah terdaftar',back:'/'}); 
+            })
             
-        // })
+        })
     
 }
 
