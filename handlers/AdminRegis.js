@@ -31,7 +31,8 @@ registerBook = function(req, res){
         else{
             BOOK.createBook(Book).then(function(){        
                 fs.mkdirSync(path.join(__dirname, '..','public/Image/Manga',(Book.title).toString()));
-                res.json('terdaftar');     
+                // res.json('terdaftar');
+                res.status(500).send('terdaftar');
     	    })
         }
     });
