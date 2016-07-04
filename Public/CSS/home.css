@@ -324,8 +324,10 @@ a.socialIcon:hover, .socialHoverClass {
 
 
 #footerWrapper{
-    background-image: url(../Image/footer.png);
-    background-size:50%;
+    background-image: url(../Image/footer-background.jpg);
+    background-repeat: no-repeat;
+    height: 300px;
+    background-size:100%;
     
 }
 #footerRights .row{

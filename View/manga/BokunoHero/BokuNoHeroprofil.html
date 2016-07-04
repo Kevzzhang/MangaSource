@@ -13,99 +13,72 @@
 
 </style>
 
-<div class="container-fluid">
-
     <div class="container-fluid">
-
-
-
         <div class="row jumbotron"  id="Latest">
-        <!--   <h2>Boku No Hero Academia</h2>
-          <p>Author : Horikoshi Kouhei</p>
-          <p>Artist : Horikoshi Kouhei</p>
-          <p>Status : Ongoing</p> -->
-
-          <div class="thumbnail">
-            <div class="desc">
-                                    <img class="cover" src="/Image/boku no hero cover.jpg">
-                                    <!-- <div class="caption"> -->
-                                    <h2>Boku No Hero Academia</h2>
-                                        <p>Author : Horikoshi Kouhei</p>
-                                        <p>Artist : Horikoshi Kouhei</p>
-                                        <p>Status : Ongoing</p>
-                                        <p>Type : Manga(Japanese)</p>
-                                        <p>Description : </p> 
-                                        <p>Izuku "Deku" Midoriya was just a regular middle school student in a world where people with superpowers known as "Quirks" are the norm. However, he dreams of one day becoming a Hero, despite being bullied by his classmates for not having a Quirk. The story follows Izuku's entrance into Yūei High School, where the next generation of Heroes are cultivated.</p>
+            <div class="thumbnail">
+                    <div class="desc">
+                        <img class="cover" src="/Image/boku no hero cover.jpg">
+                        <!-- <div class="caption"> -->
+                        <h2>Boku No Hero Academia</h2>
+                            <p>Author : Horikoshi Kouhei</p>
+                            <p>Artist : Horikoshi Kouhei</p>
+                            <p>Status : Ongoing</p>
+                            <p>Type : Manga(Japanese)</p>
+                            <p>Description : </p> 
+                            <p>Izuku "Deku" Midoriya was just a regular middle school student in a world where people with superpowers known as "Quirks" are the norm. However, he dreams of one day becoming a Hero, despite being bullied by his classmates for not having a Quirk. The story follows Izuku's entrance into Yūei High School, where the next generation of Heroes are cultivated.</p>
+                    </div>                      
             </div>
-                                    <!-- </div> -->
+            <div class="col-md-12 ">
+                <div class="row panel list-group scroll col-md-12">
+                    <table class="table table-striped">
+                        <thead>
+                              <tr>
+                                    <th>#</th>
+                                    <th>Chapter</th>
+                                    <th></th>
+                              </tr>
+                        </thead>
+                         <tbody>
+                              <tr>
+                                      <td>1</td>
+                                      <td>Chapter-1 Permulaan</td>
+                                      <td><a href="/mangalist/BokuNoHero/ReadBokuNoHeroCh1">Read</a></td>    
+                              </tr>
+                               
+                        </tbody>
+                    </table>
+               </div>  
+            </div>
         </div>
-          <div class="col-md-12 ">
-              <div class="row panel list-group scroll col-md-12">
-                                    
-                                    <div class="container theme-showcase" role="main">
-
-                                        <div class="page-header">
-                                            
-                                        </div>
-
-                                        <div class="row">
-
-                                            <div class="col-md-6">
-
-                                                <table class="table table-striped">
-
-                                                    <thead>
-
-                                                        <tr>
-
-                                                            <th>#</th>
-                                                            <th>Chapter</th>
-                                                            <th></th>
-                                                            
-                                                        </tr>
-                                                    </thead>
-                                                    <tbody>
-
-                                                        <tr>
-
-                                                            <td>1</td>
-                                                            <td>Boku No Hero Academia CH1</a></td>
-                                                            <td><a href="/mangalist/BokuNoHero/ReadBokuNoHeroCh1">Read</a></td>
-                                                          
-                                                        </tr>
-
-                                                        <tr>
-
-                                                            <td>2</td>
-                                                            <td>Boku No Hero Academia CH2</a></td>
-                                                            <td><a href="">Read</a></td>
-                
-                                                        </tr>
-
-                                                        <tr>
-
-                                                            <td>3</td>
-                                                            <td>Boku No Hero Academia CH3</a></td>
-                                                            <td><a href="">Read</a></td>
-                                                              
-                                                        </tr>
-
-                                                    </tbody>
-
-                                                </table>
-
-                                            </div>
-                                        </div>
-
-                                    </div>
-
-                                    
-              </div>
-          </div>
-                        
+        <div class="col-sm-12">
+            <div id="disqus_thread"></div>
+            <div id="disqus_thread"></div>
+            <script>
+                /**
+                 *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+                 *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
+                 */
+                /*
+                var disqus_config = function () {
+                    this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+                    this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+                };
+                */
+                (function() {  // DON'T EDIT BELOW THIS LINE
+                    var d = document, s = d.createElement('script');
+                    
+                    s.src = '//mangasource.disqus.com/embed.js';
+                    
+                    s.setAttribute('data-timestamp', +new Date());
+                    (d.head || d.body).appendChild(s);
+                })();
+            </script>
+            <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+            <script id="dsq-count-scr" src="//mangasource.disqus.com/count.js" async></script>
         </div>
+        
     </div>
-
+       
 </div>
 {% endblock %}
 {% block footer %}
