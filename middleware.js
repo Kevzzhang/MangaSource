@@ -12,7 +12,7 @@ var bodyParser = require('body-parser');
 var cookieParser = require('cookie-parser');
 
 middleware = function(app){
-	// app.use(favicon(path.join(__dirname, 'Public', 'favicon.ico')));
+	// app.use(favicon(path.join(__dirname, 'Public/Image', 'favicon.png')));
 	app.use(logger('dev'));
 	app.use(cookieParser())
 	app.use(bodyParser.json({})); // set limit to 100 mb
