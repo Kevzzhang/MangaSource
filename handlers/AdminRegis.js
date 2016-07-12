@@ -12,8 +12,7 @@ var fs = require('fs');
 
 page = function(req,res){
     var username = req.params.username;
-    res.render('adminPanelRegis.html',{username : username});
- 
+    res.render('adminPanelRegis.html',{username : username, hiddenState:"hidden", hiddenMessage:""});
 }
  var upload = multer({ 
             dest: newPath,
@@ -32,25 +31,26 @@ registerBook = function(req, res){
     newPath
     
 	var Book ={
-		title : req.file.title,
-		author : req.file.author,
-		rating : req.file.rating,
-		about : req.file.about,
+		title : req.body.title,
+		author : req.body.author,
+		rating : req.body.rating,
+		about : req.body.about,
         status : 'ongoing'
         
 	}
     
 	BOOK.findBOOK(Book.title).then(function(row){
         if(row.length > 0){
-            res.json('buku ada judul yang sama');
+                var username = req.params.username;
+                res.render('adminPanelRegis.html',{username : username, hiddenState:"", hiddenMessage:"Telah ada buku dengan judul yang sama!"});
         }
         else{
             BOOK.createBook(Book).then(function(){
                 newPath = path.join(__dirname, '..','public/Image/Manga',(Book.title).toString())
                 fs.mkdirSync(newPath);
                 upload.single('cover');
-                console.log("done");
-                res.status(500).send('terdaftar');
+                var username = req.params.username;
+                res.render('adminPanelRegis.html',{username : username, hiddenState:"", hiddenMessage:"Buku telah ditambahkan!"});
     	    })
         }
     });

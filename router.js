@@ -4,8 +4,8 @@ var express = require('express')
 	homePage = require("./handlers/homePage"),
 	homeLoggedPage = require("./handlers/homeLoggedPage"),
 	lstmanga = require("./handlers/mangaList"),
-	bokunohero = require("./handlers/bokunoheroprofil"),
-	readbokunohero = require("./handlers/readbnha"),
+	bookprofile = require("./handlers/bookprofile"),
+	readmanga = require("./handlers/readmanga"),
 	
 
 	Auth = require("./auth");
@@ -29,8 +29,8 @@ userrouter = function(app){
     user.get('/',homePage.page);
 	user.get('/Logged/:username',Auth.validate,homeLoggedPage.page);
 	user.get('/mangalist',lstmanga.page);
-	user.get('/mangalist/BokuNoHero',bokunohero.page);
-	user.get('/mangalist/BokuNoHero/ReadBokuNoHeroCh1',readbokunohero.page);
+	user.get('/mangalist/:title',bookprofile.page);
+	user.get('/mangalist/:title/:chapter/:hlmn',readmanga.page);
 	user.get('/logout',Auth.validate,function(req,res){
 		res.clearCookie('auth');
 		res.redirect('/');

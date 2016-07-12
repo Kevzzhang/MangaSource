@@ -11,7 +11,7 @@ var createBook = function(Buku){
 		});
 }
 var findBOOK = function(judul){
-	return knex('Buku').select('id_buku','judul').where('judul',judul);
+	return knex('Buku').select().where('judul',judul);
 };
 
 var fetchAllBook = function(){

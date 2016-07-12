@@ -8,7 +8,9 @@ var frontPage,
     Auth = require("../auth");
     
 page = function(req,res){
-    res.render('Home.html');
+    BOOK.fetchAllBook().then(function(Books){
+        res.render('Home.html', {Books : Books});
+    });
 }
 
 login = function(req,res){

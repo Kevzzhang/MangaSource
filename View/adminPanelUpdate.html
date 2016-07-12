@@ -10,6 +10,10 @@
 {%block content%}
 			<div class="container">
 			    <div class="row col-sm-12">
+					<div class="alert alert-success fade in" {{hiddenState}}>
+                        <a href="#" id="message" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+                        {{hiddenMessage}}
+                    </div>
 			        <div class="input-group col-sm-7 col-sm-offset-2">
 			           	 <div class="form-top">
                             <div class="form-top-left">
@@ -20,19 +24,19 @@
                                 <i class="fa fa-user-secret"></i>	
                             </div>
                         </div>
-                        <div class="form-bottom col-sm-12">
+                        <form method="POST" class="form-bottom col-sm-12">
                         	<div class="input-group" >
 								 <span class=" input-group-addon glyphicon glyphicon-book" id="basic-addon1"> Comic </span>
-								 <select class=" form-control" id="sel1">
+								 <select class=" form-control" id="sel1" name="buku">
 								 	<option>Select the comic title</option>
 									 {% for book in Books %}
-									 	<option>{{book.judul}}</option>
+									 	<option value="{{book.judul}}">{{book.judul}}</option>
 									 {% endfor %}
 							      </select>
 							</div>
 							<div class="input-group">
 							  <span class="input-group-addon glyphicon glyphicon-bookmark" id="sizing-addon2"> Chapter</span>
-							  <input type="text" class="form-control" placeholder="enter the chapter name" aria-describedby="sizing-addon2">
+							  <input name="title" type="text" class="form-control" placeholder="enter the chapter name" aria-describedby="sizing-addon2">
 							</div>
 							<div class="input-group">
 						      <input type="text" class="form-control" placeholder="Page 1">
@@ -155,10 +159,10 @@
 						      </span>
 						    </div>
 							<div class="form-group-inline">
-								<button type="button" class="col-sm-6 btn btn-success">Submit</button>
+								<button type="submit" class="col-sm-6 btn btn-success">Submit</button>
 								<button type="button" class="col-sm-6 btn btn-warning">Cancel</button>
 							</div>
-				        </div>
+				        </form>
 				    </div>
 				</div>
 			</div>

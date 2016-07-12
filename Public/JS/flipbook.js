@@ -1,21 +1,14 @@
-
 function loadApp() {
-
  	$('#canvas').fadeIn(1000);
-
  	var flipbook = $('.magazine');
-
  	// Check if the CSS was already loaded
-	
 	if (flipbook.width()==0 || flipbook.height()==0) {
 		setTimeout(loadApp, 10);
 		return;
 	}
-	
 	// Create the flipbook
-
 	flipbook.turn({
-			
+
 			// Magazine width
 
 			width: 922,
@@ -42,7 +35,7 @@ function loadApp() {
 
 			// The number of pages
 
-			pages: 28,
+			pages: 8,        //=====================================================================================>>>
 
 			// Events
 
@@ -121,51 +114,8 @@ function loadApp() {
 					loadLargePage(page, pageElement);
 
 			},
-
-			// zoomIn: function () {
-
-			// 	$('#slider-bar').hide();
-			// 	$('.made').hide();
-			// 	$('.magazine').removeClass('animated').addClass('zoom-in');
-			// 	$('.zoom-icon').removeClass('zoom-icon-in').addClass('zoom-icon-out');
-				
-			// 	if (!window.escTip && !$.isTouch) {
-			// 		escTip = true;
-
-			// 		$('<div />', {'class': 'exit-message'}).
-			// 			html('<div>Press ESC to exit</div>').
-			// 				appendTo($('body')).
-			// 				delay(2000).
-			// 				animate({opacity:0}, 500, function() {
-			// 					$(this).remove();
-			// 				});
-			// 	}
-			// },
-
-			// zoomOut: function () {
-
-			// 	$('#slider-bar').fadeIn();
-			// 	$('.exit-message').hide();
-			// 	$('.made').fadeIn();
-			// 	$('.zoom-icon').removeClass('zoom-icon-out').addClass('zoom-icon-in');
-
-			// 	setTimeout(function(){
-			// 		$('.magazine').addClass('animated').removeClass('zoom-in');
-			// 		resizeViewport();
-			// 	}, 0);
-
-			// }
 		}
 	});
-
-	// Zoom event
-
-	// if ($.isTouch)
-	// 	$('.magazine-viewport').bind('zoom.doubleTap', zoomTo);
-	// else
-	// 	$('.magazine-viewport').bind('zoom.tap', zoomTo);
-
-
 	// Using arrow keys to turn the page
 
 	$(document).keydown(function(e){
@@ -358,6 +308,6 @@ yepnope({
 	test : Modernizr.csstransforms,
 	yep: ['/JS/turn.min.js'],
 	nope: ['/JS/turn.html4.min.js', '/CSS/jquery.ui.html4.css'],
-	both: ['/JS/zoom.min.js', '/CSS/jquery.ui.css', '/Image/Manga/BokuNoHeroAcademia/Ch1/magazine.js', '/CSS/magazine.css'],
+	both: ['/JS/zoom.min.js', '/CSS/jquery.ui.css', '/Image/Manga/BokuNoHeroAcademia/Ch2/magazine.js', '/CSS/magazine.css'],
 	complete: loadApp
 });

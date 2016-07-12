@@ -1,0 +1,54 @@
+{% extends "basereadmanga.html" %}
+
+
+{% block content %}
+<style type="text/css">
+	.teks{float: right;}
+	.next-button, .previous-button{
+		-webkit-touch-callout: none;
+		-webkit-user-select: none;
+		-khtml-user-select: none;
+		-moz-user-select: none;
+		-ms-user-select: none;
+		-o-user-select: none;
+		user-select: none;
+		cursor: pointer;
+	}
+</style>
+<div class="teks"><a href="/mangalist/{{book.judul}}"><button type="button" class="btn btn-xs btn-danger">X</button></a></div>
+<div id="canvas">
+
+<div class="zoom-icon zoom-icon-in"></div>
+<div class="container-fluid">
+	<div class="magazine-viewport">
+	<div class="container">
+		<div class="magazine">
+			<!-- Next button -->
+			<!--<div ignore="1" class="next-button">►</div>-->
+			{% if last %}
+				<a href="/mangalist/{{book.judul}}">
+            {% else %}
+				{% set hlmn=hlmn+1 %}
+				<a href="/mangalist/{{book.judul}}/{{chapter.namaChapter}}/{{hlmn}}">
+				{% set hlmn=hlmn %}
+            {% endif %}
+			<img src="/Image/Manga/{{book.judul}}/{{chapter.namaChapter}}/{{hlmn}}.jpg">
+			</a>
+			<!-- Previous button -->
+			<!--<div ignore="1" class="previous-button">◄</div>-->
+		</div>
+	</div>
+	<div class="bottom">
+		<div id="slider-bar" class="turnjs-slider">
+			<div class="geser" id="slider"></div>
+		</div>
+	</div>
+</div>
+</div>
+
+
+{% endblock %}
+
+{% block Scripts %}
+<!--<script src="/JS/flipbook.js"></script>-->
+{% endblock %}

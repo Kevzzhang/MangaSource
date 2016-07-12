@@ -1,40 +1,34 @@
 var adminPanel,
     page,
     addChapter,
-    Book = require("../utils/BOOK");
+    Book = require("../utils/BOOK"),
+    Chapter = require("../utils/CHAPTER");
+var path = require('path');
+var fs = require('fs');  
     
 page = function(req,res){
     var username = req.params.username;
     Book.fetchAllBook().then(function(Books){
-        res.render('adminPanelUpdate.html',{username : username, Books : Books});
+        res.render('adminPanelUpdate.html',{username : username, Books : Books, hiddenState:"hidden", hiddenMessage:""});
     });
 }
 
 addChapter = function(req,res){
     var info = {
-        bookID : req.params.id_buku,
-        title : req.params.title
+        bookTitle : req.body.buku,
+        title : req.body.title
     }
     
-    //    USER.findUSER(User.username).then(function(row){
-    //        // Create First Collection Data
-    //         var Collection ={
-    //             photos : JSON.stringify([]),
-    //             path : path.join(__dirname, '..','public/images/',(row[0].username).toString()),
-    //             id_user : row[0].id_user
-    //         }
-    //         // Insert the New Collection to database
-    //         COLLECTION.saveCOLLECTION(Collection).then(function(){
-    //             var dir = Collection.path;
-    //             // Create User folder named 'username' into public/images/username
-    //             if (!fs.existsSync(dir)){
-    //                  fs.mkdirSync(dir);
-    //             }
-    //             res.render('info.html',{info: User.username + ' telah terdaftar',back:'/'}); 
-    //         })
-            
-    //     })
-    
+    Book.findBOOK(info.bookTitle).then(function(row){
+        info.bookID = row[0].id_buku;
+        Chapter.createChapter(info).then(function(){
+            fs.mkdirSync(path.join(__dirname, '..','public/Image/Manga',(info.bookTitle).toString(),(info.title).toString()));
+        })
+        var username = req.params.username;
+        Book.fetchAllBook().then(function(Books){
+            res.render('adminPanelUpdate.html',{username : username, Books : Books, hiddenState:"", hiddenMessage:"Chapter ditambahkan pada komik "+info.bookTitle+"!"});
+        });
+    });
 }
 
 editChapter = function(req,res){

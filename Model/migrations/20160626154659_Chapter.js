@@ -3,6 +3,7 @@ var table = function(table){
 	table.string('namaChapter',50).notNullable();
 	table.datetime('waktu').notNullable();
 	table.integer('id_buku').notNullable();
+	table.integer('pageCount').notNullable();
 };
 
 
