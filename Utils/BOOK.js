@@ -20,7 +20,7 @@ var fetchAllBook = function(){
 
 var searchTitle = function(query){
 	var requery = '%'+query+'%';
-	return knex('Buku').select('judul').where('judul','like',requery);
+	return knex('Buku').select().where('judul','like',requery);
 }
 
 module.exports = {
