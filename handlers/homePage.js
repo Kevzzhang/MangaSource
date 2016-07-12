@@ -84,10 +84,15 @@ register = function(req,res,next){
 
 search = function(req,res){
     var query = req.body.query;
-    var username = req.params.username;
     console.log(query);
     BOOK.searchTitle(query).then(function(SearchResult){
-        res.render('searchResult.html',{username : username, Books : SearchResult});
+        console.log(SearchResult);
+        if (SearchResult.length > 0){
+            res.json(SearchResult);
+        }
+        else{
+            res.json("empty");
+        }
     });
     
 }
